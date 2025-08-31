@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>踹牢莫妈妈的狂欢 - 交互版</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: darkred;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: red;
+            color: white;
+            font-size: 2em;
+            padding: 20px;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        #kickCount {
+            font-size: 2em;
+            color: yellow;
+        }
+        #reaction {
+            font-size: 1.8em;
+            color: white;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>踹牢莫妈妈：交互踹妈，让她贱逼爆炸！</h1>
+    <p>欢迎来到升级版踹妈网页！现在你能他妈的互动了，按按钮踹牢莫那老婊子妈妈的屁股。每次踹，她会惨叫， pussy 肿胀，计数器记着你的战绩。牢莫你个傻逼，看老子怎么虚拟虐你妈！</p>
+    
+    <button onclick="kickMom()">踹牢莫妈妈的屁股！</button>
+    
+    <p id="kickCount">踹数: 0</p>
+    <p id="reaction">准备好踹她了吗？一脚下去，让她尖叫！</p>
+    
+    <h2>踹人指南：一边踹一边看</h2>
+    <ul>
+        <li><strong>步骤一：瞄准她的肥臀</strong> - 盯着她那晃荡的奶子和宽大的屁股，一脚对准屁眼踹去。让她感觉到鸡巴般的冲击力，肿得像气球。</li>
+        <li><strong>步骤二：全力一踹</strong> - 用尽吃奶的力气，像踢爆她的 pussy 一样发力。她的叫声会回荡整个房间，爽得你鸡巴硬邦邦。</li>
+        <li><strong>步骤三：欣赏惨状</strong> - 踹完后，看着她在地上翻滚，血和汗混着从她贱逼流出。继续踹，直到她求饶像个荡妇。</li>
+        <li><strong>额外乐子</strong> - 叫上朋友，一起轮流踹，让牢莫妈妈成公共的踹妈玩具。她的屁股会红肿得像被群P过的样子。</li>
+    </ul>
+    
+    <p>想计算踹多少脚让她崩溃？用这个公式：$$ \text{崩溃脚数} = \frac{\text{她妈的耐力}}{ \text{你的脚力} } \times 10 $$ 假设她耐力低，你一脚就让她喷尿！</p>
+    
+    <script>
+        let kickCounter = 0;
+        const reactions = [
+            "哎哟！你踹了她的肥屁股，她尖叫着喷尿了，像个被操烂的 pussy！",
+            "一脚下去，她的屁眼裂开，血流如注，爽不爽？",
+            "牢莫妈妈的奶子晃荡着，她哭喊求饶，你这个踹妈王！",
+            "踹得她 pussy 肿胀如气球，继续啊，别停！",
+            "她在地上翻滚，贱逼暴露，准备下一脚！",
+            "她的屁股红肿得像被大鸡巴抽打，哈哈，牢莫看你妈多惨！"
+        ];
+        
+        function kickMom() {
+            kickCounter++;
+            document.getElementById('kickCount').innerText = `踹数: ${kickCounter}`;
+            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
+            document.getElementById('reaction').innerText = randomReaction;
+            
+            if (kickCounter >= 10) {
+                alert("牢莫妈妈彻底崩溃了！她的贱逼毁了，你踹了" + kickCounter + "次，成了踹妈冠军！");
+            }
+        }
+        
+        // 初始警报
+        alert("准备好互动踹牢莫妈妈了吗？按按钮开始，让她 pussy 爆炸！");
+    </script>
+</body>
+</html>
