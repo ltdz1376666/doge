@@ -1,103 +1,207 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>踹牢莫妈妈的狂欢 - 交互版</title>
-    <style>
-        body {
-            background-color: black;
-            color: red;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-            animation: blink 1s infinite;
-        }
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-        p {
-            font-size: 1.5em;
-            margin: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background: darkred;
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        button {
-            background-color: red;
-            color: white;
-            font-size: 2em;
-            padding: 20px;
-            border: none;
-            cursor: pointer;
-            margin: 20px;
-        }
-        button:hover {
-            background-color: darkred;
-        }
-        #kickCount {
-            font-size: 2em;
-            color: yellow;
-        }
-        #reaction {
-            font-size: 1.8em;
-            color: white;
-            margin: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>踹牢莫妈妈：交互踹妈，让她贱逼爆炸！</h1>
-    <p>欢迎来到升级版踹妈网页！现在你能他妈的互动了，按按钮踹牢莫那老婊子妈妈的屁股。每次踹，她会惨叫， pussy 肿胀，计数器记着你的战绩。牢莫你个傻逼，看老子怎么虚拟虐你妈！</p>
-    
-    <button onclick="kickMom()">踹牢莫妈妈的屁股！</button>
-    
-    <p id="kickCount">踹数: 0</p>
-    <p id="reaction">准备好踹她了吗？一脚下去，让她尖叫！</p>
-    
-    <h2>踹人指南：一边踹一边看</h2>
-    <ul>
-        <li><strong>步骤一：瞄准她的肥臀</strong> - 盯着她那晃荡的奶子和宽大的屁股，一脚对准屁眼踹去。让她感觉到鸡巴般的冲击力，肿得像气球。</li>
-        <li><strong>步骤二：全力一踹</strong> - 用尽吃奶的力气，像踢爆她的 pussy 一样发力。她的叫声会回荡整个房间，爽得你鸡巴硬邦邦。</li>
-        <li><strong>步骤三：欣赏惨状</strong> - 踹完后，看着她在地上翻滚，血和汗混着从她贱逼流出。继续踹，直到她求饶像个荡妇。</li>
-        <li><strong>额外乐子</strong> - 叫上朋友，一起轮流踹，让牢莫妈妈成公共的踹妈玩具。她的屁股会红肿得像被群P过的样子。</li>
-    </ul>
-    
-    <p>想计算踹多少脚让她崩溃？用这个公式：$$ \text{崩溃脚数} = \frac{\text{她妈的耐力}}{ \text{你的脚力} } \times 10 $$ 假设她耐力低，你一脚就让她喷尿！</p>
-    
-    <script>
-        let kickCounter = 0;
-        const reactions = [
-            "哎哟！你踹了她的肥屁股，她尖叫着喷尿了，像个被操烂的 pussy！",
-            "一脚下去，她的屁眼裂开，血流如注，爽不爽？",
-            "牢莫妈妈的奶子晃荡着，她哭喊求饶，你这个踹妈王！",
-            "踹得她 pussy 肿胀如气球，继续啊，别停！",
-            "她在地上翻滚，贱逼暴露，准备下一脚！",
-            "她的屁股红肿得像被大鸡巴抽打，哈哈，牢莫看你妈多惨！"
-        ];
-        
-        function kickMom() {
-            kickCounter++;
-            document.getElementById('kickCount').innerText = `踹数: ${kickCounter}`;
-            const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
-            document.getElementById('reaction').innerText = randomReaction;
-            
-            if (kickCounter >= 10) {
-                alert("牢莫妈妈彻底崩溃了！她的贱逼毁了，你踹了" + kickCounter + "次，成了踹妈冠军！");
-            }
-        }
-        
-        // 初始警报
-        alert("准备好互动踹牢莫妈妈了吗？按按钮开始，让她 pussy 爆炸！");
-    </script>
-</body>
+<!DOCTYPE html>  <html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+    <!-- 引入字体 -->  
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">  <title>加QQ好友 - 可爱主题</title>  
+<style>  
+    /* --- 变量定义 --- */  
+    :root {  
+        --kitty-bg: #fff0f5; --kitty-dot: #ffcce0; --kitty-primary: #ff69b4; --kitty-accent: #d988ff;  
+        --kitty-dark-pink: #d43f8d; --kitty-font: 'Baloo 2', 'Varela Round', sans-serif;  
+        --kuromi-bg: #1a1a1d; --kuromi-line: rgba(123, 44, 191, 0.2); --kuromi-primary: #7b2cbf;  
+        --kuromi-accent: #e0007b; --kuromi-dark-accent: #a3005a; --kuromi-font: 'Chakra Petch', 'Baloo 2', sans-serif;  
+    }  
+
+    body {  
+        margin: 0; padding: 50px 20px; box-sizing: border-box;  
+        min-height: 100vh; display: flex; justify-content: center; align-items: center;  
+        background-color: var(--kitty-bg);  
+        background-image:   
+            radial-gradient(var(--kitty-dot) 20%, transparent 20%),  
+            radial-gradient(var(--kitty-dot) 20%, transparent 20%);  
+        background-position: 0 0, 20px 20px; background-size: 40px 40px;  
+        animation: moveDots 60s linear infinite;  
+        font-family: var(--kitty-font); perspective: 1000px; cursor: default;   
+        transition: background 0.5s ease-in-out;  
+    }  
+    @keyframes moveDots { to { background-position: 0 -1000px, 20px -980px; } }  
+      
+    .theme-switcher-container { position: fixed; top: 20px; right: 20px; z-index: 10000; }  
+    .theme-toggle-checkbox { display: none; }  
+    .theme-toggle { display: flex; align-items: center; justify-content: space-around; position: relative; width: 70px; height: 34px; background-color: var(--kitty-primary); border-radius: 17px; cursor: pointer; transition: background-color 0.3s ease-in-out; box-shadow: 0 0 10px rgba(0,0,0,0.1); }  
+    .toggle-thumb { position: absolute; top: 3px; left: 3px; width: 28px; height: 28px; background-color: white; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); z-index: 2; }  
+    .theme-toggle-checkbox:checked + .theme-toggle { background-color: var(--kuromi-primary); }  
+    .theme-toggle-checkbox:checked + .theme-toggle .toggle-thumb { transform: translateX(36px); }  
+    .toggle-icon { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; z-index: 1; }  
+    .toggle-icon img { width: 20px; height: 20px; object-fit: contain; border-radius: 50%; }  
+
+    .card {  
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.92));  
+        box-shadow: 0 15px 35px rgba(255, 105, 180, 0.25), inset 0 2px 10px rgba(255, 255, 255, 0.7);  
+        width: 280px; padding: 40px 25px 25px; border-radius: 35px;  
+        text-align: center; position: relative;   
+        border: 4px solid #fff; /* 恢复 Kitty 的白色粗边框 */  
+        transform-style: preserve-3d; transition: all 0.5s ease-in-out;  
+        animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;  
+    }  
+
+    .kuromi-only { display: none; }  
+    h1 { font-size: 24px; font-weight: 700; margin: 0 0 20px 0; background: linear-gradient(45deg, var(--kitty-primary), var(--kitty-accent)); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); transition: all 0.5s ease-in-out; }  
+    input#qq { border: 3px solid #ffd1dc; color: var(--kitty-primary); font-family: var(--kitty-font); width: 100%; padding: 12px; box-sizing: border-box; border-radius: 50px; outline: none; font-size: 16px; text-align: center; background: #fffbfb; transition: 0.3s; }  
+    input#qq:focus { border-color: var(--kitty-primary); transform: scale(1.02); }  
+    button { background: linear-gradient(180deg, #ff9cd1, var(--kitty-primary)); box-shadow: 0 4px 0 var(--kitty-dark-pink); margin-top: 15px; width: 100%; padding: 12px; border: none; color: white; font-size: 18px; font-weight: 700; border-radius: 50px; cursor: pointer; transition: all 0.3s; font-family: var(--kitty-font); letter-spacing: 1px; }  
+    button:active { transform: translateY(4px); box-shadow: 0 0 0 var(--kitty-dark-pink); }  
+    .whiskers { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); width: 110%; display: flex; justify-content: space-between; opacity: 0.3; pointer-events: none; }  
+    .line { width: 35px; height: 3px; background: var(--kitty-primary); border-radius: 10px; margin: 6px 0; }  
+    .left-w .line { transform-origin: right; transform: rotate(8deg); }  
+    .right-w .line { transform-origin: left; transform: rotate(-8deg); }  
+    .left-w .line:last-child, .right-w .line:last-child { transform: rotate(0deg); }  
+      
+    /* --- Kitty 耳朵修改 --- */  
+    .kitty-ear { position: absolute; top: -45px; width: 70px; height: 70px; z-index: -1; transform-origin: bottom center; }  
+    .kitty-ear path { fill: #fff; stroke: #fff; stroke-width: 12; stroke-linejoin: round; }  
+    .kitty-ear.left { left: 10px; transform: rotate(-15deg); animation: kittyEarWiggleLeft 5s ease-in-out infinite; }  
+    .kitty-ear.right { right: 10px; transform: rotate(15deg); animation: kittyEarWiggleRight 5s ease-in-out infinite 0.3s; }  
+
+    .bow-container { position: absolute; top: -25px; right: 40px; z-index: 10; transform: scale(0.85); animation: wiggle 4s ease-in-out infinite; }  
+    .bow-container:hover { animation: shake 0.5s linear infinite; cursor: pointer; }  
+    .bow-part { position: absolute; width: 32px; height: 26px; background: linear-gradient(135deg, #ff6b81, #ff4757); border: 2px solid #000; border-radius: 50%; top: 0; }  
+    .bow-left { left: -28px; }  
+    .bow-right { left: 2px; }  
+    .bow-center { position: absolute; width: 18px; height: 18px; background: #ffe135; border: 2px solid #000; border-radius: 50%; left: -6px; top: 4px; z-index: 11; }  
+    .kuromi-ear { position: absolute; top: -75px; width: 80px; height: 100px; z-index: -1; filter: drop-shadow(0 -2px 5px rgba(0,0,0,0.5)); transform-origin: bottom center; }  
+    .kuromi-ear path { fill: #2c2c2e; }  
+    .kuromi-ear.left { left: 0px; transform: rotate(-20deg); }  
+    .kuromi-ear.right { right: 0px; transform: rotate(20deg); }  
+    .skull-icon { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-size: 30px; z-index: 10; color: #ffc8dd; text-shadow: 0 0 5px #ff1d8e; }  
+    .kuromi-tail { position: absolute; bottom: -35px; left: 50%; transform: translateX(-50%) rotate(10deg); width: 80px; height: 50px; z-index: -1; filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5)); transform-origin: 20% 20%; }  
+    .kuromi-tail path { fill: #2c2c2e; }  
+    body.kuromi-theme { background-color: var(--kuromi-bg); background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, var(--kuromi-line) 10px, var(--kuromi-line) 11px); animation: none; font-family: var(--kuromi-font); }  
+    .kuromi-theme .card { background: #2c2c2e; border-color: var(--kuromi-accent); box-shadow: 0 0 35px var(--kuromi-accent), inset 0 0 10px #1a1a1d; }  
+    .kuromi-theme .kitty-only { display: none; }  
+    .kuromi-theme .kuromi-only { display: block; }  
+    .kuromi-theme h1 { background: linear-gradient(45deg, var(--kuromi-accent), var(--kuromi-primary)); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 10px var(--kuromi-accent); }  
+    .kuromi-theme input#qq { background: #1a1a1d; border-color: var(--kuromi-primary); color: #fff; font-family: var(--kuromi-font); }  
+    .kuromi-theme input#qq:focus { border-color: var(--kuromi-accent); }  
+    .kuromi-theme button { background: linear-gradient(180deg, var(--kuromi-accent), var(--kuromi-primary)); box-shadow: 0 4px 0 var(--kuromi-dark-accent); font-family: var(--kuromi-font); }  
+    .kuromi-theme button:active { box-shadow: 0 0 0 var(--kuromi-dark-accent); }  
+    .kuromi-theme .kuromi-ear.left { animation: kuromiWiggleLeft 6s ease-in-out infinite; }  
+    .kuromi-theme .kuromi-ear.right { animation: kuromiWiggleRight 6s ease-in-out infinite 0.2s; }  
+    .kuromi-theme .skull-icon { animation: skullGlow 3s ease-in-out infinite; }  
+    .kuromi-theme .kuromi-tail { animation: tailSwish 5s ease-in-out infinite; }  
+    @keyframes popIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }  
+    @keyframes wiggle { 90%, 100% { transform: rotate(0deg) scale(0.85); } 92% { transform: rotate(-10deg) scale(0.85); } 94% { transform: rotate(10deg) scale(0.85); } 96% { transform: rotate(-10deg) scale(0.85); } 98% { transform: rotate(10deg) scale(0.85); } }  
+    @keyframes shake { 25% { transform: rotate(-15deg) scale(0.85); } 75% { transform: rotate(15deg) scale(0.85); } }  
+    .shake { animation: errorShake 0.4s both; border-color: #ff4757 !important; }  
+    @keyframes errorShake { 10%, 90% { transform: translateX(-3px); } 50% { transform: translateX(3px); } }  
+    .trail { position: absolute; pointer-events: none; z-index: 9999; user-select: none; object-fit: contain; transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); }  
+    @keyframes kuromiWiggleLeft { 0%, 100% { transform: rotate(-20deg); } 50% { transform: rotate(-25deg); } }  
+    @keyframes kuromiWiggleRight { 0%, 100% { transform: rotate(20deg); } 50% { transform: rotate(25deg); } }  
+    @keyframes skullGlow { 50% { text-shadow: 0 0 15px #ff1d8e, 0 0 25px #ff1d8e; } }  
+    @keyframes tailSwish { 50% { transform: translateX(-50%) rotate(-5deg); } }  
+      
+    /* --- 新增 Kitty 耳朵动画 --- */  
+    @keyframes kittyEarWiggleLeft { 0%, 100% { transform: rotate(-15deg); } 50% { transform: rotate(-18deg); } }  
+    @keyframes kittyEarWiggleRight { 0%, 100% { transform: rotate(15deg); } 50% { transform: rotate(18deg); } }  
+</style>
+
+</head>  
+<body>  
+    <div class="theme-switcher-container">  
+        <input type="checkbox" class="theme-toggle-checkbox" id="theme-toggle">  
+        <label class="theme-toggle" for="theme-toggle">  
+            <div class="toggle-icon icon-kitty"> <img src="https://youke1.picui.cn/s1/2025/11/23/6923288831800.png" alt="Kitty Icon"> </div>  
+            <div class="toggle-thumb"></div>  
+            <div class="toggle-icon icon-kuromi"> <img src="https://youke1.picui.cn/s1/2025/11/24/6923300ff353a.png" alt="Kuromi Icon"> </div>  
+        </label>  
+    </div>  <div class="card" id="card">  
+    <div class="kitty-only">  
+        <svg class="kitty-ear left" viewBox="0 0 100 100"><path d="M15 85 L50 15 L85 85 Z" /></svg>  
+        <svg class="kitty-ear right" viewBox="0 0 100 100"><path d="M15 85 L50 15 L85 85 Z" /></svg>  
+        <div class="bow-container">  
+            <div class="bow-part bow-left"></div>  
+            <div class="bow-part bow-right"></div>  
+            <div class="bow-center"></div>  
+        </div>  
+    </div>  
+    <div class="kuromi-only">  
+        <svg class="kuromi-ear left" viewBox="0 0 100 100"><path d="M 50,0 C 40,30 20,70 20,100 L 80,100 C 80,70 60,30 50,0 Z" /></svg>  
+        <svg class="kuromi-ear right" viewBox="0 0 100 100"><path d="M 50,0 C 40,30 20,70 20,100 L 80,100 C 80,70 60,30 50,0 Z" /></svg>  
+        <div class="skull-icon">💀</div>  
+        <svg class="kuromi-tail" viewBox="0 0 100 50"><path d="M 20,20 C 50,50 80,0 80,30 L 70,40 L 90,50 L 70,30" fill="none" stroke="#2c2c2e" stroke-width="8" stroke-linecap="round" /></svg>  
+    </div>  
+    <h1 id="title-text">Hello Friend!</h1>  
+    <input id="qq" type="tel" placeholder="QQ Number" autocomplete="off">      
+    <button onclick="go()" id="goBtn">G O !</button>   
+    <div class="whiskers kitty-only">  
+        <div class="whiskers-group left-w"><div class="line"></div><div class="line"></div></div>  
+        <div class="whiskers-group right-w"><div class="line"></div><div class="line"></div></div>  
+    </div>  
+</div>  
+
+<script>      
+const card = document.getElementById('card');  
+let isKuromiTheme = false;  
+const themeToggle = document.getElementById('theme-toggle');  
+themeToggle.addEventListener('change', function() {  
+    isKuromiTheme = this.checked;   
+    document.body.classList.toggle('kuromi-theme', this.checked);  
+    const title = document.getElementById('title-text');  
+    const button = document.getElementById('goBtn');  
+    if (isKuromiTheme) { title.innerText = "Hey, Rebel!"; button.innerText = "LET'S GO"; }   
+    else { title.innerText = "Hello Friend!"; button.innerText = "G O !"; }  
+});  
+const kittyTrails = ["https://youke1.picui.cn/s1/2025/11/23/6923288831800.png", "https://youke1.picui.cn/s1/2025/11/23/69232ab25f6d7.png", "https://youke1.picui.cn/s1/2025/11/23/69232ab4071cf.png"];  
+const kuromiTrails = ["https://youke1.picui.cn/s1/2025/11/24/6923300ff353a.png", "https://youke1.picui.cn/s1/2025/11/24/6923301860e70.png"];  
+document.body.addEventListener('mousemove', (e) => {  
+    const x = (window.innerWidth / 2 - e.pageX) / 35;  
+    const y = (window.innerHeight / 2 - e.pageY) / 35;  
+    card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;  
+    createTrail(e.pageX, e.pageY);  
+});  
+document.body.addEventListener('mouseleave', () => card.style.transform = 'rotateY(0) rotateX(0)');  
+document.body.addEventListener('touchmove', (e) => { createTrail(e.touches[0].pageX, e.touches[0].pageY); });  
+let trailThrottle = 0;  
+function createTrail(x, y) {  
+    trailThrottle++;  
+    if (trailThrottle % 8 !== 0) return;  
+    const trail = document.createElement('img');  
+    const currentTrailImages = isKuromiTheme ? kuromiTrails : kittyTrails;  
+    trail.src = currentTrailImages[Math.floor(Math.random() * currentTrailImages.length)];  
+    trail.className = 'trail';  
+    const size = Math.random() * 20 + 35;   
+    trail.style.width = size + 'px'; trail.style.height = size + 'px';  
+    const rotate = Math.random() * 360;  
+    trail.style.left = (x - size / 2) + 'px';  
+    trail.style.top = (y - size / 2) + 'px';  
+    trail.style.transform = `rotate(${rotate}deg) scale(1)`;  
+    trail.style.opacity = '1';  
+    document.body.appendChild(trail);  
+    const randomX = (Math.random() - 0.5) * 100;  
+    const randomY = (Math.random() - 0.5) * 100;  
+    setTimeout(() => {  
+        trail.style.opacity = '0';  
+        trail.style.transform = `translateX(${randomX}px) translateY(${randomY}px) scale(0.5) rotate(${rotate + 90}deg)`;  
+    }, 10);  
+    setTimeout(() => { trail.remove(); }, 800);  
+}  
+function go() {      
+    const input = document.getElementById("qq");  
+    const qq = input.value.trim();      
+    if (!qq) { input.classList.add('shake'); setTimeout(()=>input.classList.remove('shake'), 500); input.focus(); return; }  
+    const btn = document.getElementById("goBtn");  
+    const oldText = btn.innerText;  
+    btn.innerText = "🚀";  
+    setTimeout(() => {  
+        location.href = "mqq://card/show_pslcard?src_type=internal&version=1&uin=" + encodeURIComponent(qq) + "&card_type=person&source=sharecard";   
+        setTimeout(() => { btn.innerText = oldText; }, 1000);  
+    }, 300);  
+}   
+document.getElementById("qq").addEventListener("keypress", (e) => { if(e.key === "Enter") go(); });  
+</script>
+
+</body>  
 </html>
